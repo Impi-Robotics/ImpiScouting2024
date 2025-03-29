@@ -1,10 +1,28 @@
 {
-  "heading": "Crescendo - 2024",
+  "heading": "Impi Scouting - 2025",
   "logo": "logo.png",
+  "skipTeamSelection": true,
   "pages": [
     {
       "name": "Setup",
       "widgets": [
+        {
+          "name": "Match Number",
+          "type": "number",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
+        },
+        {
+          "name": "Team Number",
+          "type": "number",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
+        },
+
         {
           "name": "Scouter Name",
           "type": "text",
@@ -15,6 +33,7 @@
         },
         {
           "name": "Starting Position",
+          "type": "dropdown",
           "options": [
             "1",
             "2",
@@ -24,8 +43,10 @@
         {
           "type": "picture",
           "file": "field.png",
-          "selectRadius": 10
+          "colspan": 2,
+          "height": 250
         }
+
       ]
     },
     {
@@ -167,10 +188,9 @@
       "widgets": [
         {
           "name": "End Location",
-          "type": "radio",
+          "type": "dropdown",
           "options": [
-            "Onstage and Spotlit",
-            "Onstage",
+            "None",
             "Parked",
             "Shallow",
             "Deep"
@@ -191,20 +211,8 @@
         },
 
         {
-          "name": "Mechanical Failures",
-          "type": "text"
-        },
-        {
-          "name": "Stage Positions",
-          "type": "heading",
-          "colspan": 2,
-          "align": "center"
-        },
-        {
-          "type": "picture",
-          "file": "stage.png",
-          "colspan": 2,
-          "height": 250
+          "name": "Comments",
+          "type": "textarea"
         }
       ]
     }
