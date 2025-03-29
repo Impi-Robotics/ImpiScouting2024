@@ -48,6 +48,8 @@ button {
   background-color: var(--button-color);
   user-select: none;
   cursor: pointer;
+  height: 3em;
+  width: 8em;
 }
 
 input, select, textarea {
@@ -57,6 +59,7 @@ input, select, textarea {
 button, input, select, textarea {
   font-size: 100%;
   border: none;
+  text-wrap: auto;
 }
 
 table {
@@ -66,6 +69,10 @@ table {
 td, th {
   border: 1px solid var(--text-color);
   padding: 2px;
+}
+
+h4 {
+    font-size: x-large;
 }
 
 @media (pointer:none),

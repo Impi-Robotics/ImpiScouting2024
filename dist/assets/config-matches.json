@@ -1,5 +1,5 @@
 {
-  "heading": "Impi Scouting - 2024",
+  "heading": "Impi Scouting - 2025",
   "logo": "logo.png",
   "skipTeamSelection": true,
   "pages": [
@@ -22,7 +22,6 @@
             "value": 0
           }
         },
-
         {
           "name": "Scouter Name",
           "type": "text",
@@ -35,67 +34,71 @@
           "name": "Starting Position",
           "type": "dropdown",
           "options": [
+            "0",
             "1",
             "2",
-            "3",
-            "4"
-          ]
+            "3"
+          ],
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
         },
         {
           "type": "picture",
           "file": "field.png",
           "colspan": 2,
-          "height": 250
+          "height": 250,
+          "align": "center"
         }
-
       ]
     },
     {
-      "name": "Autonomous",
+      "name": "Auton",
       "widgets": [
         {
-          "name": "Passed starting line",
-          "type": "checkbox"
-        },
-        {
-          "type": "spacer",
-          "col": 2
-        },
-        {
-          "name": "Scored first shot",
-          "type": "checkbox"
-        },
-        {
-          "type": "spacer",
-          "height": 10
-        },
-        {
-          "name": "Close Notes Scored",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "max": 3
-        },
-        {
-          "type": "spacer",
-          "height": 10
-        },
-        {
-          "name": "Far Notes Scored",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "max": 5
-        },
-        {
-          "name": "Notes Diagram",
+          "name": "Algae Scored",
           "type": "heading",
-          "colspan": 2,
+          "colspan": 5,
           "align": "center"
         },
         {
-          "type": "picture",
-          "file": "half.png",
-          "colspan": 2,
-          "height": 250
+          "name": "Net",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "align": "right"
+        },
+        {
+          "type": "spacer",
+          "height": 10
+        },
+        {
+          "name": "Coral Scored",
+          "type": "heading",
+          "colspan": 5,
+          "align": "center"
+        },
+        {
+          "name": "L1 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "align": "right"
+        },
+        {
+          "name": "L2 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "align": "right"
+        },{
+          "name": "L3 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "align": "right"
+        },{
+          "name": "L4 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "align": "right"
         }
       ]
     },
@@ -103,20 +106,54 @@
       "name": "Teleop",
       "widgets": [
         {
-          "name": "Scoring",
+          "name": "Algae Scored",
           "type": "heading",
           "colspan": 5,
           "align": "center"
         },
         {
-          "name": "Speaker Notes",
+          "name": "Net",
           "type": "spinbox",
-          "col": 2
+          "prefix": "Auto",
+          "align": "right"
         },
         {
-          "name": "Amp Notes",
+          "name": "Proccesor",
           "type": "spinbox",
-          "col": 2
+          "prefix": "Auto",
+          "align": "right"
+        },
+        {
+          "type": "spacer",
+          "height": 10
+        },
+        {
+          "name": "Coral Scored",
+          "type": "heading",
+          "colspan": 5,
+          "align": "center"
+        },
+        {
+          "name": "L1 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "align": "right"
+        },
+        {
+          "name": "L2 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "align": "right"
+        },{
+          "name": "L3 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "align": "right"
+        },{
+          "name": "L4 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "align": "right"
         },
         {
           "type": "spacer",
@@ -127,18 +164,26 @@
           "type": "dropdown",
           "options": [
             "0 (Not Played)",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5 (Very Effective)"
+            "1 (Poor)",
+            "2 (Below Average)",
+            "3 (Average)",
+            "4 (Strong)",
+            "5 (Locked Down)"
           ],
-          "col": 2
+          "align": "center"
         },
         {
-          "name": "Mechanical Failure",
-          "type": "checkbox",
-          "col": 2
+          "name": "Driver Rating",
+          "type": "dropdown",
+          "options": [
+            "0 (Could Not Assess)",
+            "1 (Looks Lost)",
+            "2 (Unconfident)",
+            "3 (Average)",
+            "4 (Smooth)",
+            "5 (Efficient)"
+          ],
+          "align": "center"
         }
       ]
     },
@@ -149,23 +194,30 @@
           "name": "End Location",
           "type": "dropdown",
           "options": [
-            "None",
             "Parked",
-            "Onstage"
+            "Shallow",
+            "Deep"
+          ],
+          "default": 3,
+          "col": 1
+        },{
+          "name": "Pit Award Nomination",
+          "type": "dropdown",
+          "options": [
+            "None",
+            "Eel-ectric Auton, Best Auton",
+            "Deep Diver, Best Deep Climb",
+            "Reefscaper, Best Coral"
           ],
           "default": 3,
           "col": 1
         },
         {
-          "name": "Scored trap note",
-          "type": "checkbox",
-          "col": 1
-
-        },
-        {
           "name": "Comments",
           "type": "textarea"
         }
+
+
       ]
     }
   ]
